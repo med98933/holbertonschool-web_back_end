@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" 
+"""
 a type-annotated function safely_get_value
  """
 from typing import List, Tuple
