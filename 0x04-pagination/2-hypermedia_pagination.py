@@ -52,5 +52,5 @@ def index_range(page, page_size):
     """
     function named index_range
     """
-    previous = (page - 1) * page_size
-    return (previous, previous + page_size)
+    prev = (page - 1) * page_size
+    return (prev, prev + page_size)
