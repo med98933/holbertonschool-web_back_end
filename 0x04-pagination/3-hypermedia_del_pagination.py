@@ -29,7 +29,7 @@ class Server:
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
-        """Deletion-resilient hypermedia pagination
+        """Dataset indexed by sorting position, starting at 0
         """
         if self.__indexed_dataset is None:
             dataset = self.dataset()
@@ -41,7 +41,7 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
-        Server class to paginate a database of popular baby names.
+        The method should return a dictionary
         """
         assert (isinstance(index, int)
                 and index in range(len(self.__indexed_dataset)))
@@ -56,8 +56,8 @@ class Server:
             else:
                 r += 1
         if r < len(self.__indexed_dataset):
-            n = r
+            next = r
         else:
-            n = None
-        return {'index': index, 'n_index': n,
+            next = None
+        return {'index': index, 'next_index': next,
                 'page_size': len(data), 'data': data}
