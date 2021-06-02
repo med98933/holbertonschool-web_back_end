@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """ Regex-ing """
-from typing import List
 import re
+from typing import List
+
 
 
 def filter_datum(fields: List[str],
