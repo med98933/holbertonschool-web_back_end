@@ -49,4 +49,3 @@ def get_logger() -> logging.Logger:
     ch.setFormatter(formatter)
     logger.addHandler(ch)
     return logger
-  
