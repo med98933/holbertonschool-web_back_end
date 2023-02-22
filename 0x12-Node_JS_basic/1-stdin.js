@@ -2,7 +2,7 @@ process.stdin.setEncoding('utf8');
 
 console.log('Welcome to Holberton School, what is your name?');
 
-process.stdin.on('readable', function () {
+process.stdin.on('readable', () => {
   let name = process.stdin.read();
   if (name !== null) {
     name = name.trim();
@@ -10,6 +10,6 @@ process.stdin.on('readable', function () {
   }
 });
 
-process.stdin.on('end', function () {
+process.stdin.on('end', () => {
   console.log('This important software is now closing');
 });

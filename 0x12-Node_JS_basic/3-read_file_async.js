@@ -8,13 +8,13 @@ function countStudents(path) {
         return;
       }
       const lines = data.trim().split('\n');
-      let fields = {};
+      const fields = {};
       for (const line of lines) {
         const student = line.split(',');
         if (!fields[student[3]]) {
           fields[student[3]] = {
             count: 0,
-            students: []
+            students: [],
           };
         }
         if (student[0] !== '') {
